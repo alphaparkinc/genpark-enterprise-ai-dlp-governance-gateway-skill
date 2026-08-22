@@ -1,0 +1,35 @@
+{
+  "name": "genpark-enterprise-ai-dlp-governance-gateway-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Enterprise AI Data Loss Prevention (DLP) gateway enforcing zero-trust PII masking and regulatory compliance across LLM traffic.",
+  "author": "genpark",
+  "category": "security",
+  "tags": [
+    "ai-dlp",
+    "pii-masking",
+    "security-gateway",
+    "governance",
+    "credal"
+  ],
+  "inputs": {
+    "user_prompt": {
+      "type": "string"
+    },
+    "compliance_policy": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "sanitized_prompt": {
+      "type": "string"
+    },
+    "pii_entities_redacted_count": {
+      "type": "integer"
+    },
+    "dlp_verdict": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
